@@ -56,7 +56,6 @@ class ToneGenerator: NSObject, AVAudioPlayerDelegate {
 
         var error: NSError?
         var resourcePath: NSString? = NSBundle.mainBundle().pathForResource(freq.file.name, ofType: freq.file.type)
-        println(resourcePath)
         var data: NSData? = NSData(contentsOfFile: resourcePath!)
         player = AVAudioPlayer(data: data, fileTypeHint: AVFileTypeWAVE, error: &error)
         
